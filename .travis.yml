@@ -3,7 +3,7 @@ services:
   - docker
 
 before_install:
-  - docker build -t DEVIMAGE -f Dockerfile.dev .
+  - docker build -t busfahrer/docker-react -f Dockerfile.dev .
 
 script:
-  - docker run DEVIMAGE npm run test -- --coverage
+  - docker run busfahrer/docker-react npm run test -- --coverage
